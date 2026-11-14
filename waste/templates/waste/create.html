@@ -1,0 +1,6 @@
+<h1>Report Waste</h1>
+<form method="post" enctype="multipart/form-data">
+  {% csrf_token %} {{ form.as_p }}
+  <button type="submit">Submit Report</button>
+</form>
+<a href="{% url 'home' %}">Back</a>

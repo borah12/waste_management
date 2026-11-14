@@ -1,0 +1,1 @@
+web: gunincorn waste_management.wsgi

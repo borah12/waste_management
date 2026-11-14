@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Waste Management</title>
+  </head>
+  <body>
+    <h1>Community Waste Reports</h1>
+    <a href="{% url 'create_report' %}">Report Waste</a>
+    <hr />
+    {% for r in reports %}
+    <h3><a href="{% url 'report_detail' r.pk %}">{{ r.title }}</a></h3>
+    <p>{{ r.location }} | {{ r.status }} | {{ r.created_at }}</p>
+    {% empty %}
+    <p>No reports yet.</p>
+    {% endfor %}
+  </body>
+</html>

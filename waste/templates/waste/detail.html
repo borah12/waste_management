@@ -1,0 +1,9 @@
+<h1>{{ report.title }}</h1>
+<p><b>Location:</b> {{ report.location }}</p>
+<p><b>Status:</b> {{ report.status }}</p>
+<p>{{ report.description }}</p>
+<p>Reported by: {{ report.reporter_name }}</p>
+{% if report.photo %}
+<img src="{{ waste.photo.url }}" width="300" />
+{% endif %}
+<br /><a href="{% url 'home' %}">Back</a>
